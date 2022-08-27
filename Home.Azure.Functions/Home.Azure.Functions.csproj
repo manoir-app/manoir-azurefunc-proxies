@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AzureFunctionsVersion>v3</AzureFunctionsVersion>
+    <UserSecretsId>7cb2f885-9a41-471e-a003-efb904f49739</UserSecretsId>
+    <ApplicationInsightsResourceId>/subscriptions/36d78b87-65ae-45b6-bff8-daedf47194ed/resourceGroups/Home-Automation/providers/microsoft.insights/components/HomeAnzinCarbenayMeFunctions</ApplicationInsightsResourceId>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Alexa.NET" Version="1.15.0" />
+    <PackageReference Include="Alexa.NET.APL" Version="7.2.0" />
+    <PackageReference Include="Alexa.NET.Notifications" Version="1.0.4" />
+    <PackageReference Include="Alexa.NET.Profile" Version="1.0.0" />
+    <PackageReference Include="Alexa.NET.Settings" Version="1.1.0" />
+    <PackageReference Include="Alexa.NET.Timers" Version="1.0.0" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.8.3" />
+    <PackageReference Include="ManoirApp.Home.Common.Graph" Version="1.1.1" />
+    <PackageReference Include="Microsoft.ApplicationInsights.WorkerService" Version="2.15.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.AzureAppConfiguration" Version="4.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="3.1.10" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="3.0.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+</Project>
